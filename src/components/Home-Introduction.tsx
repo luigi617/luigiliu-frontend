@@ -34,9 +34,9 @@ const HomeIntroduction: React.FC = () => {
         </div>
       </div>
 
-      {/* Scroll down for the projects section */}
+      {/* Scroll down for more */}
       <div className={styles.scrollDownContainer}>
-        <p>Scroll down for the projects</p>
+        <p>Scroll down for more</p>
         <div className={styles.arrowDown}>&#8595;</div>
       </div>
     </div>

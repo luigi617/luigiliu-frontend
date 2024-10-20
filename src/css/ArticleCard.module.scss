@@ -46,7 +46,7 @@
     font-weight: bold;
     margin-top: 12px;
     margin-bottom: 0px;
-    line-height: 1.2em;
+    line-height: var(--line-height-larger);
     display: -webkit-box;
     -webkit-line-clamp: 2; /* Ensures the title is no more than 2 lines */
     -webkit-box-orient: vertical;

@@ -6,10 +6,11 @@
     margin: 0 auto;
     padding: 20px;
     text-align: center;
+    color: var(--theme-text-color);
 }
 
 .externalLink {
-    color: var(--theme-text-color);
+    color: var(--theme-link-color);
     text-decoration: none;
   
     &:hover {

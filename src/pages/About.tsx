@@ -1,10 +1,15 @@
 import React from 'react';
+import testImage from '../assets/images/ds.jpg';
+import AboutEducation from '../components/About-Education';
+import AboutWork from '../components/About-Work';
+import Footer from '../components/Footer';
 
 const About: React.FC = () => {
   return (
     <div>
-      <h1>About Luigi Liu</h1>
-      <p>Information about Luigi Liu goes here.</p>
+      <AboutEducation />
+      <AboutWork />
+      <Footer />
     </div>
   );
 };

@@ -5,7 +5,8 @@ import { ThemeProvider } from './components/ThemeContext';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
-import Contact from './pages/Contact';
+import Games from './pages/Games';
+import Articles from './pages/Articles';
 
 const App: React.FC = () => {
   return (
@@ -15,7 +16,8 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/games" element={<Games />} />
+          <Route path="/articles" element={<Articles />} />
         </Routes>
       </ThemeProvider>
     </Router>
