@@ -4,13 +4,14 @@ import HomeArticle from '../components/Home-Article';
 import HomeGame from '../components/Home-Game';
 import MovingText from '../components/MovingText';
 import Spacer from '../components/Spacer';
+import Footer from '../components/Footer';
 
 const Home: React.FC = () => {
   return (
     <div>
       <HomeIntroduction />
       <HomeArticle />
-      <Spacer height={20}  width='100%'/>
+      <Spacer height={20} />
       <MovingText
       text="As I continue my studies,
       I will publish articles covering
@@ -18,8 +19,9 @@ const Home: React.FC = () => {
       and/or challenging, which I believe
       are worth articulating for my
       future self or others!" />
-      <Spacer height={20} width='100%'/>
+      <Spacer height={20} />
       <HomeGame />
+      <Footer />
     </div>
   );
 };

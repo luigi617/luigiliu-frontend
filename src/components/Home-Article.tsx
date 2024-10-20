@@ -3,6 +3,7 @@ import ArticleCard from './ArticleCard';
 import styles from '../css/Home-Article.module.scss';
 
 import testImage from '../assets/images/ds.jpg';
+import { Link } from 'react-router-dom';
 
 const articles = [
   {
@@ -29,7 +30,10 @@ const HomeArticle: React.FC = () => {
   return (
     <div className={styles.homeArticleContainer}>
       <div className={styles.articleListContainer}>
-        <h1 className={styles.pageTitle}>Article.</h1>
+        <div className={styles.pageTitleContainer}>
+          <h1 className={styles.pageTitle}>Articles.</h1>
+          <Link to="/articles">discover more</Link>
+        </div>
         <div className={styles.articleGrid}>
           {articles.map((article, index) => (
             <ArticleCard

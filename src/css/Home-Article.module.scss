@@ -7,6 +7,22 @@
   margin: 0 auto;
   padding: 20px;
 }
+.pageTitleContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pageTitleContainer a {
+  color: var(--theme-link-color);
+  font-size: var(--font-size-small);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--theme-link-hover-color);
+    text-decoration: underline;
+  }
+}
 
 .pageTitle {
   font-size: var(--font-size-title);
