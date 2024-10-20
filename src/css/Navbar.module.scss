@@ -1,5 +1,4 @@
 // Define SCSS variables
-$navbar-heigh: 50px;
 $navbar-font-size: 30px;
 $navbar-item-gap: 100px; /* Gap between navbar items on desktop */
 $navbar-mobile-item-gap: 20px; /* Gap between navbar items on mobile */
@@ -15,7 +14,7 @@ $navbar-padding: 15px 30px;
   align-items: center;
   background-color: var(--theme-navbar-background);
   padding: $navbar-padding;
-  height: $navbar-heigh;
+  height: var( --navbar-heigh);
   position: relative;
 }
 
@@ -121,7 +120,7 @@ $navbar-padding: 15px 30px;
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: $navbar-heigh;
+    top: var(--navbar-heigh);
     right: 0;
     background-color: var(--theme-navbar-background);
     width: 100%;

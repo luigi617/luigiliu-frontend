@@ -1,0 +1,33 @@
+.homeArticleContainer {
+  background-color: var(--theme-background);
+}
+
+.articleListContainer {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.pageTitle {
+  font-size: var(--font-size-title);
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: var(--theme-text-color);
+}
+
+.articleGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default to 3 cards per row */
+  gap: 20px; /* Adjust gap between cards as needed */
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); /* Change to 2 cards per row on tablets */
+    & > :last-child {
+      display: none;
+    }
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr; /* Change to 1 card per row on very small screens */
+  }
+}

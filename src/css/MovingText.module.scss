@@ -1,0 +1,16 @@
+/* MovingText.module.scss */
+.movingTextContainer {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    background-color: var(--theme-background-lighter);
+    padding: 10px 0px;
+  }
+  
+  .movingText {
+    display: inline-block;
+    white-space: nowrap;
+    will-change: transform;
+    color: var(--theme-text-color);
+  }
+  

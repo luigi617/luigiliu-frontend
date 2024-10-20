@@ -1,22 +1,51 @@
 
 
 :root {
-    --theme-background: #ffffff; /* Light mode background color */
+    --theme-background: #eeeeee; /* Light mode background color */
+    --theme-background-darker: #e9e9e9; /* Light mode background color */
+    --theme-background-lighter: #ffffff; /* Light mode background color */
     --theme-text-color: #000000; /* Light mode text color */
     --font-family-base: 'Calibri';
+    --font-size-title: 48px;
+    --font-size-llarge: 30px;
+    --font-size-large: 24px;
     --font-size-base: 20px;
-  
+    --font-size-small: 16px;
+    --navbar-heigh: 50px;
+
     --theme-navbar-background: #f8f9fa; /* Light mode navbar background */
     --theme-navbar-text-color: #212529; /* Light mode navbar text color */
+
+    /* Light mode button colors */
+    --button-background: #2e2e2e; /* Green button background */
+    --button-text-color: #ffffff; /* White text on buttons */
+    --button-hover-background: #0c0c0c; /* Slightly darker green on hover */
+    --button-active-background: #000000; /* Slightly darker green on hover */
+    --button-border: none; /* No border for button */
+    --button-disabled-background: #cccccc; /* Slightly darker green on hover */
+    --button-disabled-text-color: #666666; /* Slightly darker green on hover */
     
+    --container-max-width: 1200px; /* Slightly darker green on hover */
+
+    --border-shadow-color: rgba(0, 0, 0, 0.1);
+    --border-hover-shadow-color: rgba(0, 0, 0, 0.2);
 }
 
 body.dark {
-    --theme-background: #121212; /* Dark mode background color */
+    --theme-background: #282828; /* Dark mode background color */
+    --theme-background-darker: #262626; /* Light mode background color */
+    --theme-background-lighter: #333333; /* Light mode background color */
     --theme-text-color: #e0e0e0; /* Dark mode text color */
 
     --theme-navbar-background: #000000; /* Dark mode navbar background */
     --theme-navbar-text-color: #ffffff; /* Dark mode navbar text color */
+
+    /* Dark mode button colors */
+    --button-background: #333333; /* Dark button background */
+    --button-text-color: #ffffff; /* White text on dark button */
+    --button-hover-background: #555555; /* Lighter gray on hover */
+    --button-border: 1px solid #777777; /* Subtle border for dark buttons */
+
 }
 
 body {
