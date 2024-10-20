@@ -1,0 +1,29 @@
+
+
+:root {
+    --theme-background: #ffffff; /* Light mode background color */
+    --theme-text-color: #000000; /* Light mode text color */
+    --font-family-base: 'Calibri';
+    --font-size-base: 20px;
+  
+    --theme-navbar-background: #f8f9fa; /* Light mode navbar background */
+    --theme-navbar-text-color: #212529; /* Light mode navbar text color */
+    
+}
+
+body.dark {
+    --theme-background: #121212; /* Dark mode background color */
+    --theme-text-color: #e0e0e0; /* Dark mode text color */
+
+    --theme-navbar-background: #000000; /* Dark mode navbar background */
+    --theme-navbar-text-color: #ffffff; /* Dark mode navbar text color */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
