@@ -5,7 +5,7 @@ import { useTheme } from './ThemeContext';
 
 const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { theme, toggleTheme, isLightTheme } = useTheme(); // Use the global theme from ThemeContext
+  const { toggleTheme, isLightTheme } = useTheme(); // Use the global theme from ThemeContext
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!isMobileMenuOpen);

@@ -7,7 +7,7 @@ import amazonImage from '../assets/images/amazon.jpg';
 import ecobambuImage from '../assets/images/ecobambu.png';
 import decenergyImage from '../assets/images/decenergy.png';
 import DescriptionSkillsSection from './About-Work-DescriptionSkillsSection';
-import exp from 'constants';
+
 const workExperiences = [
     {
         key: "euroingro_work",
@@ -90,7 +90,7 @@ const AboutWork: React.FC = () => {
         <div className={styles.aboutWorkContainer}>
             <div className={styles.workContainer}>
             <h1 className={styles.title}>Professional Experiences</h1>
-            {workExperiences.map((experience, index) => 
+            {workExperiences.map((experience) => 
                 <TextImageRowComponent
                 key={experience.key}
                 reverse={experience.reverse}

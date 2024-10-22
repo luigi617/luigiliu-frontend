@@ -1,5 +1,4 @@
 import React from 'react';
-import testImage from '../assets/images/ds.jpg';
 import AboutEducation from '../components/About-Education';
 import AboutWork from '../components/About-Work';
 import Footer from '../components/Footer';

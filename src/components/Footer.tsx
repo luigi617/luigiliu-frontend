@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from '../css/Footer.module.scss';
-import { Link } from 'react-router-dom';
 import Spacer from './Spacer';
 
 const Footer: React.FC = () => {

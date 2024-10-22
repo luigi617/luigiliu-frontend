@@ -8,7 +8,7 @@ import { useTheme } from './ThemeContext';
 
 const HomeIntroduction: React.FC = () => {
   const navigate = useNavigate();
-  const { theme, toggleTheme, isLightTheme } = useTheme(); // Use the global theme from ThemeContext
+  const { isLightTheme } = useTheme(); // Use the global theme from ThemeContext
   const profileImage = isLightTheme() ? profileLightImage : profileDarkImage;
 
   const handleClick = () => {
