@@ -4,7 +4,7 @@
   flex-direction: column; /* Stack children vertically */
   justify-content: center; /* Centers the content vertically */
   align-items: center; /* Centers the content horizontally */
-  height: calc(100vh - var(--navbar-heigh)); /* Full height minus navbar */
+  height: calc(100vh - var(--navbar-height)); /* Full height minus navbar */
   text-align: center;
   max-width: 100%;
 }

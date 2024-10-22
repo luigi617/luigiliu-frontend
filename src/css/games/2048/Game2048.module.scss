@@ -1,5 +1,7 @@
 /* src/css/games/2048/Game2048.module.scss */
 .game2048Container{
+  background-color: var(--theme-background);
+  min-height: calc(100vh - var(--navbar-height));
   display: flex;
   justify-content: center;
 }
@@ -21,6 +23,7 @@
 .header h1 {
   font-size: 48px;
   margin: 0;
+  color: var(--theme-text-color);
 }
 
 .gridSizeSelect {
@@ -51,7 +54,7 @@
 
 .score {
   font-size: 24px;
-  color: #776e65;
+  color: var(--theme-text-less-important-color);
 }
 
 .overlay {

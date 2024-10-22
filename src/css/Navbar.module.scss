@@ -14,7 +14,7 @@ $navbar-padding: 15px 30px;
   align-items: center;
   background-color: var(--theme-navbar-background);
   padding: $navbar-padding;
-  height: var( --navbar-heigh);
+  height: var(--navbar-inner-height);
   position: sticky; /* Make the navbar sticky */
   top: 0; /* Stick it to the top */
   z-index: 1000; /* Ensure it's above other content */
@@ -120,7 +120,7 @@ $navbar-padding: 15px 30px;
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: var(--navbar-heigh);
+    top: var(--navbar-inner-height);
     right: 0;
     background-color: var(--theme-navbar-background);
     width: 100%;
