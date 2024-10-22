@@ -1,7 +1,7 @@
 import React from 'react';
 import GameCard from '../components/GameCard';
 import testImage from '../assets/images/ds.jpg';
-import styles from '../css/Game.module.scss'
+import styles from '../css/Games.module.scss'
 
 const Games: React.FC = () => {
   return (
