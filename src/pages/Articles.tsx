@@ -1,45 +1,16 @@
 import React from 'react';
-import testImage from '../assets/images/ds.jpg';
+import articleHumanActivityRecognitionUsingObjectDetectionImage from '../assets/images/articleHumanActivityRecognitionUsingObjectDetection.jpeg';
 import styles from '../css/Articles.module.scss';
 import ArticleCard from '../components/ArticleCard';
 
 const articles = [
   {
-    image: testImage,
-    title: 'DATA STRUCTURE AND ALGORITHM CHEAT SHEET',
-    category: 'Programming',
-    date: 'Jun 26 2024',
-  },
-  {
-    image: testImage,
-    title: 'EIGENVALUES AND EIGENVECTORS',
-    category: 'Mathematics',
-    date: 'Dec 21 2023',
-  },
-  {
-    image: testImage,
-    title: 'LINEAR REGRESSION',
-    category: 'Programming',
-    date: 'Dec 19 2023',
-  },
-  {
-    image: testImage,
-    title: 'LINEAR REGRESSION',
-    category: 'Programming',
-    date: 'Dec 19 2023',
-  },
-  {
-    image: testImage,
-    title: 'LINEAR REGRESSION',
-    category: 'Programming',
-    date: 'Dec 19 2023',
-  },
-  {
-    image: testImage,
-    title: 'LINEAR REGRESSION',
-    category: 'Programming',
-    date: 'Dec 19 2023',
-  },
+    image: articleHumanActivityRecognitionUsingObjectDetectionImage,
+    title: 'Human Activity Recognition Using Object Detection',
+    category: 'Computer Vision',
+    date: 'Oct 23 2024',
+    url: '/articles/human-activity-recognition-using-object-detection'
+  }
 ];
 
 const Articles: React.FC = () => {
@@ -53,6 +24,7 @@ const Articles: React.FC = () => {
               title={article.title}
               category={article.category}
               date={article.date}
+              url={article.url}
             />
           ))}
         </div>

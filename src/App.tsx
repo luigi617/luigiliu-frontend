@@ -9,6 +9,7 @@ import Games from './pages/Games';
 import Articles from './pages/Articles';
 import Game2048 from './pages/Game-2048';
 import GameTyping from './pages/Game-Typing';
+import ArticleHumanActivityRecognitionUsingObjectDetection from './pages/articles/HumanActivityRecognitionUsingObjectDetection';
 
 const App: React.FC = () => {
   return (
@@ -22,6 +23,8 @@ const App: React.FC = () => {
           <Route path="/games/2048" element={<Game2048 />} />
           <Route path="/games/typing" element={<GameTyping />} />
           <Route path="/articles" element={<Articles />} />
+          <Route path="/articles/human-activity-recognition-using-object-detection"
+                element={<ArticleHumanActivityRecognitionUsingObjectDetection />} />
         </Routes>
       </ThemeProvider>
     </Router>

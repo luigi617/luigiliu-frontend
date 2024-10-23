@@ -30,12 +30,17 @@
     --button-disabled-text-color: #666666; /* Slightly darker green on hover */
     
     --container-max-width: 1200px; /* Slightly darker green on hover */
+    --article-container-max-width: 800px; /* Slightly darker green on hover */
 
     --border-shadow-color: rgba(0, 0, 0, 0.1);
     --border-hover-shadow-color: rgba(0, 0, 0, 0.2);
 
     --line-height-base: 1em;
     --line-height-larger: 1.2em;
+
+    --article-title-color: #000000;
+    --article-subtitle-color: #555;
+    --article-text-color: #000000;
 }
 
 body.dark {
@@ -58,6 +63,10 @@ body.dark {
 
     --border-shadow-color: rgba(0, 0, 0, 0.7);
     --border-hover-shadow-color: rgba(0, 0, 0, 0.8);
+
+    --article-title-color: #e0e0e0;
+    --article-subtitle-color: #a1a1a1;
+    --article-text-color: #e0e0e0;
 }
 
 body {
