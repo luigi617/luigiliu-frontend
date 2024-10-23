@@ -1,6 +1,7 @@
 import React from 'react';
 import GameCard from '../components/GameCard';
-import testImage from '../assets/images/ds.jpg';
+import game2048Image from '../assets/images/2048_logo.png';
+import typingImage from '../assets/images/typing.jpg';
 import styles from '../css/Games.module.scss'
 
 const Games: React.FC = () => {
@@ -8,16 +9,14 @@ const Games: React.FC = () => {
     <div className={styles.gameContainer}>
         <div className={styles.gameGrid}>
             <GameCard
-            image={testImage}
-            title="Awesome Game Title"
+            image={game2048Image}
+            title="2048"
+            url='/games/2048'
             />
             <GameCard
-            image={testImage}
-            title="Awesome Game Title"
-            />
-            <GameCard
-            image={testImage}
-            title="Awesome Game Title"
+            image={typingImage}
+            title="Typing"
+            url='/games/typing'
             />
         </div>
     </div>

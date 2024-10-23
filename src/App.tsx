@@ -8,6 +8,7 @@ import About from './pages/About';
 import Games from './pages/Games';
 import Articles from './pages/Articles';
 import Game2048 from './pages/Game-2048';
+import GameTyping from './pages/Game-Typing';
 
 const App: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const App: React.FC = () => {
           <Route path="/about" element={<About />} />
           <Route path="/games" element={<Games />} />
           <Route path="/games/2048" element={<Game2048 />} />
+          <Route path="/games/typing" element={<GameTyping />} />
           <Route path="/articles" element={<Articles />} />
         </Routes>
       </ThemeProvider>

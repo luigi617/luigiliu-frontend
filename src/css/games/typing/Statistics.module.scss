@@ -1,0 +1,12 @@
+.statistics {
+  gap: 20px;
+  color: var(--theme-text-color);
+}
+
+@media (min-width: 768px) {
+  .statistics {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+}
