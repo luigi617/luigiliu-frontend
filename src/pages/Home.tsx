@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import HomeIntroduction from '../components/Home-Introduction'
 import HomeArticle from '../components/Home-Article';
 import HomeGame from '../components/Home-Game';
@@ -7,6 +7,9 @@ import Spacer from '../components/Spacer';
 import Footer from '../components/Footer';
 
 const Home: React.FC = () => {
+  useEffect(() => {
+    console.log("correct!!");
+  })
   return (
     <div>
       <HomeIntroduction />
