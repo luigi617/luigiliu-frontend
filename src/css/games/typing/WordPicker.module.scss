@@ -1,0 +1,12 @@
+.wordPicker {
+  display: flex;
+  align-items: center;
+  color: var(--theme-text-color);
+  label {
+    margin-right: 10px;
+  }
+  input[type='range'] {
+    margin-left: 10px;
+    width: 150px;
+  }
+}

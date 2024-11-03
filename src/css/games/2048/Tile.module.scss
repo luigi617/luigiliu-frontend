@@ -1,0 +1,149 @@
+/* src/css/games/2048/Tile.module.scss */
+
+.tile {
+  background-color: #eee4da;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 55px;
+  font-weight: bold;
+  color: #776e65;
+  box-sizing: border-box;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.tileEmpty {
+  background-color: transparent;
+}
+
+.tile-2 {
+  background-color: #eee4da;
+  color: #776e65;
+}
+
+.tile-4 {
+  background-color: #ede0c8;
+  color: #776e65;
+}
+
+.tile-8 {
+  background-color: #f2b179;
+  color: #f9f6f2;
+}
+
+.tile-16 {
+  background-color: #f59563;
+  color: #f9f6f2;
+}
+
+.tile-32 {
+  background-color: #f67c5f;
+  color: #f9f6f2;
+}
+
+.tile-64 {
+  background-color: #f65e3b;
+  color: #f9f6f2;
+}
+
+.tile-128 {
+  background-color: #edcf72;
+  color: #f9f6f2;
+  font-size: 45px;
+}
+
+.tile-256 {
+  background-color: #edcc61;
+  color: #f9f6f2;
+  font-size: 45px;
+}
+
+.tile-512 {
+  background-color: #edc850;
+  color: #f9f6f2;
+  font-size: 45px;
+}
+
+.tile-1024 {
+  background-color: #edc53f;
+  color: #f9f6f2;
+  font-size: 35px;
+}
+
+.tile-2048 {
+  background-color: #edc22e;
+  color: #f9f6f2;
+  font-size: 35px;
+}
+
+.tile-4096 {
+  background-color: #3c3a32;
+  color: #f9f6f2;
+  font-size: 30px;
+}
+
+.tile-8192 {
+  background-color: #3c3a32;
+  color: #f9f6f2;
+  font-size: 30px;
+}
+
+.tile-16384 {
+  background-color: #3c3a32;
+  color: #f9f6f2;
+  font-size: 25px;
+}
+
+.merged {
+  animation: merge 0.2s forwards;
+}
+
+@keyframes merge {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+
+@media (max-width: 1024px) {
+  .tile {
+    font-size: 30px;
+  }
+
+  .tile-128,
+  .tile-256,
+  .tile-512,
+  .tile-1024,
+  .tile-2048 {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .tile {
+    font-size: 25px;
+  }
+
+  .tile-128,
+  .tile-256,
+  .tile-512,
+  .tile-1024,
+  .tile-2048 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,33 @@
+.customButton {
+    background-color: var(--button-background); /* Green background */
+    border: none;
+    color: var(--button-text-color); /* White text */
+    padding: 12px 24px; /* Padding for a larger clickable area */
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 0px; /* Rounded corners */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  .customButton:hover {
+    background-color: var(--button-hover-background); /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+  }
+  
+  .customButton:active {
+    background-color: var(--button-active-background); /* Even darker green when clicked */
+    transform: translateY(0); /* No lift when active */
+  }
+  
+  .customButton:disabled {
+    background-color: var(--button-disabled-background); /* Gray background when disabled */
+    color: var(--button-disabled-text-color); /* Gray text when disabled */
+    cursor: not-allowed; /* Change cursor to 'not-allowed' */
+    box-shadow: none; /* Remove shadow when disabled */
+  }
+  

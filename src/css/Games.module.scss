@@ -1,0 +1,28 @@
+.gameContainer {
+    background-color: var(--theme-background);
+    min-height: calc(100vh - var(--navbar-height));
+  }
+  
+
+  .gameGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default to 3 cards per row */
+    gap: 20px; /* Adjust gap between cards as needed */
+
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 20px;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr); /* Change to 2 cards per row on tablets */
+      }
+  
+    @media (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr); /* Change to 2 cards per row on tablets */
+    }
+  
+    @media (max-width: 480px) {
+      grid-template-columns: 1fr; /* Change to 1 card per row on very small screens */
+    }
+  }
+  

@@ -1,0 +1,19 @@
+// Define styles specific to StepsGuide component
+
+
+.aboutEducationContainer {
+    background-color: var(--theme-background);
+  }
+.educationContainer {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 20px;
+  
+    .title {
+      text-align: center;
+      font-size: var(--font-size-title);
+      margin-bottom: 40px;
+      color: var(--theme-text-color);
+    }
+  }
+  

@@ -1,0 +1,155 @@
+// Define SCSS variables
+$navbar-font-size: 30px;
+$navbar-item-gap: 100px; /* Gap between navbar items on desktop */
+$navbar-mobile-item-gap: 20px; /* Gap between navbar items on mobile */
+$hamburger-line-height: 2px; /* Height of each line in the hamburger icon */
+$hamburger-line-width: 30px; /* Width of each line in the hamburger icon */
+$hamburger-spacing: 6.7px; /* Spacing between hamburger lines */
+$nav-animation-duration: 0.4s; /* Duration for nav toggle animation */
+$navbar-padding: 15px 30px;
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--theme-navbar-background);
+  padding: $navbar-padding;
+  height: var(--navbar-inner-height);
+  position: sticky; /* Make the navbar sticky */
+  top: 0; /* Stick it to the top */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.logo {
+  color: var(--theme-navbar-text-color);
+  font-size: $navbar-font-size;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: $navbar-item-gap; /* Gap between items for desktop view */
+  margin: 0;
+  /* Hide the navigation links on mobile view with initial height of 0 */
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.navLinks a {
+  color: var(--theme-text-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+/* Hamburger Menu */
+.mobileMenu{
+  display: none;
+  align-items: center;
+  text-align: center;
+  .hamburger {
+    display: none; /* Hidden on desktop */
+    flex-direction: column;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+
+    span {
+      width: $hamburger-line-width;
+      height: $hamburger-line-height;
+      background-color: var(--theme-navbar-text-color);
+      display: block;
+      transition: all 0.3s ease;
+    }
+
+    /* Open state animation */
+    &.open .topBar {
+      transform: rotate(45deg);
+      transform-origin: 10% 10%;
+    }
+
+    &.open .middleBar {
+      opacity: 0;
+    }
+
+    &.open .bottomBar {
+      transform: rotate(-45deg);
+      transform-origin: 10% 90%;
+    }
+
+    /* Closed state animation */
+    &.closed .topBar {
+      transform: rotate(0);
+    }
+
+    &.closed .middleBar {
+      opacity: 1;
+    }
+
+    &.closed .bottomBar {
+      transform: rotate(0);
+    }
+
+    span {
+      margin-top: calc($hamburger-spacing/2);
+      margin-bottom: calc($hamburger-spacing/2);
+    }
+  }
+}
+
+
+/* Show theme toggle next to the nav links */
+.themeDesktopToggle, .themeMobileToggle {
+  color: var(--theme-navbar-text-color); /* Button text color based on theme */
+  font-size: 18px;
+}
+
+/* Mobile Menu with Animation */
+@media (max-width: 768px) {
+  .navLinks {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: var(--navbar-inner-height);
+    right: 0;
+    background-color: var(--theme-navbar-background);
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    gap: $navbar-mobile-item-gap; /* Mobile gap between items */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height $nav-animation-duration ease-in-out, opacity $nav-animation-duration ease-in-out;
+    opacity: 0;
+
+    a {
+      padding: 10px 0;
+    }
+
+    /* Animation when the menu is active */
+    &.active {
+      max-height: 300px; /* Adjust to match the height of the content */
+      opacity: 1;
+    }
+    .themeDesktopToggle {
+      display: none;
+    }
+  }
+
+  .mobileMenu {
+    display: flex;
+    .hamburger {
+      display: flex;
+    }
+    .themeMobileToggle {
+      display: flex;
+      margin-left: 40px;
+    }
+  }
+}
+

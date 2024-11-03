@@ -1,0 +1,44 @@
+.homeGameContainer {
+  background-color: var(--theme-background);
+}
+
+.gameListContainer {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 20px;
+}
+.pageTitleContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pageTitle {
+  font-size: var(--font-size-title);
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: var(--theme-text-color);
+}
+.pageTitleContainer a {
+  color: var(--theme-link-color);
+  font-size: var(--font-size-small);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--theme-link-hover-color);
+    text-decoration: underline;
+  }
+}
+
+.gameGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default to 3 cards per row */
+  gap: 20px; /* Adjust gap between cards as needed */
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr); /* Change to 2 cards per row on tablets */
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr; /* Change to 1 card per row on very small screens */
+  }
+}

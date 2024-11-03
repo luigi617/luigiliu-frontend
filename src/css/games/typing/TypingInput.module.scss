@@ -1,0 +1,56 @@
+.typingInput {
+  width: 80%;
+  // min-height: 300px;
+  border-radius: 5px;
+  border: 0.5px solid black;
+  padding: 20px;
+  cursor: pointer;
+  font-size: 30px;
+  font-family: monospace;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.correctChar {
+  color: var(--theme-text-less-important-color);
+}
+
+.wrongChar {
+  background-color: red;
+  color: white;
+}
+
+.word {
+  display: inline-block;
+  margin-bottom: 10px;
+  
+  color: var(--theme-text-color);
+}
+.charSpan{
+  margin-left: 2px;
+}
+.cursor {
+  display: inline-block; 
+  border-left: 2px solid var(--theme-text-color);;
+  height: 1em;
+  margin-left: 0px!important;
+  animation: blink 1s step-end infinite;
+}
+
+/* Blinking Animation */
+@keyframes blink {
+  0%, 100% {
+    border-left-color: var(--theme-text-color);
+  }
+  50% {
+    border-left-color: transparent;
+  }
+}
+
+
+@media (max-width: 768px) {
+  // .typingInput {
+  //   width: 90%;
+  // }
+  
+}

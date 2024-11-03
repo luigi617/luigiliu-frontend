@@ -1,0 +1,78 @@
+// DescriptionSkillsSection.module.scss
+
+.sectionContainer {
+    display: flex;
+    flex-wrap: wrap;
+  
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  
+  .descriptionColumn {
+    flex: 1;
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: var(--theme-text-color);
+    }
+  
+    p {
+      font-size: 1rem;
+      color: var(--theme-text-less-important-color);
+      line-height: var(--line-height-larger);
+    }
+  }
+  
+  .skillsColumn {
+    flex: 1;
+    padding: 16px;
+  
+    h3 {
+      font-size: 1.75rem;
+      margin-bottom: 15px;
+      color: var(--theme-text-color);
+    }
+  
+    .skillsList {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  
+      .skillItem {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+  
+        .skillName {
+          flex: 1;
+          font-size: 1rem;
+          color: var(--theme-text-color);
+        }
+  
+        .progressBar {
+          flex: 2;
+          background-color: #e0e0e0;
+          border-radius: 10px;
+          overflow: hidden;
+          margin: 0 10px;
+          height: 10px;
+        }
+  
+        .progress {
+          height: 100%;
+          background-color: var(--theme-text-less-important-color);
+          transition: width 0.5s ease-in-out;
+        }
+  
+        .skillLevel {
+          width: 40px;
+          text-align: right;
+          font-size: 0.9rem;
+          color: var(--theme-text-less-important-color);
+        }
+      }
+    }
+  }
+  

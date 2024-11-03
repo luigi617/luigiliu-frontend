@@ -1,0 +1,80 @@
+.articleLink{
+  text-decoration: none;
+}
+.articleCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+    padding: 16px;
+    background-color: var(--theme-background-darker);
+    box-shadow: 0px 4px 6px var(--border-shadow-color); /* Default shadow */
+    border-radius: 8px;
+    min-height: 400px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Transition for smooth shadow & transform */
+    position: relative;
+    overflow: hidden;
+    transform: translateY(0); /* Initial state for 3D movement */
+  }
+  
+  .articleCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Keeps shadow behind the content */
+    box-shadow: 0 8px 16px var(--border-shadow-color); /* Default shadow for blending */
+    transition: box-shadow 0.3s ease;
+    mix-blend-mode: multiply; /* Blending mode for shadow */
+  }
+  
+  .articleCard:hover {
+    box-shadow: 0px 16px 24px var(--border-hover-shadow-color); /* Heavier shadow on hover */
+    transform: translateY(-5px) scale(1.02); /* Lift and slight zoom on hover */
+  }
+  
+  .articleCard:hover::before {
+    box-shadow: 0 20px 30px var(--border-hover-shadow-color); /* Even deeper shadow on hover */
+  }
+  
+  .articleImage {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+  
+  .articleTitle {
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 0px;
+    line-height: var(--line-height-larger);
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Ensures the title is no more than 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 2.4em; /* Guarantees space for 2 lines */
+    text-align: left;
+    color: var(--theme-text-color);
+  }
+  
+  .articleInfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    color: var(--theme-text-less-important-color);
+  }
+  
+  .articleCategory {
+    font-size: var(--font-size-small);
+  }
+  
+  .articleDate {
+    font-size: var(--font-size-small);
+    font-weight: bold;
+  }
+  
