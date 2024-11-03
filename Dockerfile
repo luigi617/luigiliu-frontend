@@ -24,7 +24,7 @@ WORKDIR /code
 RUN apk add --no-cache bash
 
 # Create a directory for static files
-RUN mkdir -p /code/frontend
+RUN rm -rf /code/frontend && mkdir -p /code/frontend
 
 # Copy build files from the build stage to the shared volume
 COPY --from=build /app/dist /code/frontend
