@@ -9,7 +9,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["vite/client", "jest"]
+    "types": ["vite/client", "vitest"]
   },
   "include": ["src"]
 }
