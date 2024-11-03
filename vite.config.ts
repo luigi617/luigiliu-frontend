@@ -11,4 +11,11 @@ export default defineConfig({
     setupFiles: './src/setupTests.ts',
     exclude: [...configDefaults.exclude, 'src/reportWebVitals.ts'],
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern-compiler' // or "modern"
+      }
+    }
+  }
 })
