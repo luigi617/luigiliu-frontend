@@ -7,9 +7,6 @@ import Spacer from '../components/Spacer';
 import Footer from '../components/Footer';
 
 const Home: React.FC = () => {
-  useEffect(() => {
-    console.log("correct!!");
-  })
   return (
     <div>
       <HomeIntroduction />
