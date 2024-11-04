@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from '../css/Home-Game.module.scss'
+import GameCard from './GameCard';
 
 import game2048Image from '../assets/images/2048_logo.png';
-import GameCard from './GameCard';
 import typingImage from '../assets/images/typing.jpg';
+import restaurantsImage from '../assets/images/restaurants.webp';
 import { Link } from 'react-router-dom';
 
 
@@ -27,7 +28,7 @@ const HomeGame: React.FC = () => {
             url='/games/typing'
             />
             <GameCard
-            image={typingImage}
+            image={restaurantsImage}
             title="Nearby Restaurants"
             url='/games/nearby-restaurants'
             />

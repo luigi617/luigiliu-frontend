@@ -13,7 +13,7 @@ const Home: React.FC = () => {
   return (
     <div>
       <HomeIntroduction />
-      <Spacer height={45} background_color='var(--theme-navbar-background)'/>
+      <Spacer height={45} background_color='var(--theme-background-lighter)'/>
       <HomeArticle />
       <Spacer height={20} />
       <MovingText

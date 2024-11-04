@@ -3,6 +3,7 @@ import GameCard from '../components/GameCard';
 import game2048Image from '../assets/images/2048_logo.png';
 import typingImage from '../assets/images/typing.jpg';
 import styles from '../css/Games.module.scss'
+import restaurantsImage from '../assets/images/restaurants.webp';
 
 const Games: React.FC = () => {
   return (
@@ -17,6 +18,11 @@ const Games: React.FC = () => {
             image={typingImage}
             title="Typing"
             url='/games/typing'
+            />
+            <GameCard
+            image={restaurantsImage}
+            title="Nearby Restaurants"
+            url='/games/nearby-restaurants'
             />
         </div>
     </div>
