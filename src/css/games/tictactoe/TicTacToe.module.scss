@@ -1,9 +1,15 @@
 
 .ticTacToe {
+    background-color: var(--theme-background);
+    min-height: calc(100vh - var(--navbar-height));
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
+.title{
+  color: var(--theme-text-color);
+}
   
   .grid {
     display: grid;
@@ -21,10 +27,12 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    color: var(--theme-text-color);
   }
   
   .result {
     margin-top: 20px;
     text-align: center;
+    color: var(--theme-text-color);
   }
   

@@ -73,7 +73,6 @@ const TicTacToe: React.FC = () => {
         available_actions: currentBoard.map((cell, idx) => (cell === 0 ? idx : null)).filter(Number.isInteger),
       });
       const agentAction = response.data.next_action;
-      console.log(agentAction);
       
       const newBoard = [...currentBoard];
       newBoard[agentAction] = AgentSymbol;
@@ -111,7 +110,7 @@ const TicTacToe: React.FC = () => {
 
   return (
     <div className={styles.ticTacToe}>
-      <h2>Tic-Tac-Toe</h2>
+      <h2 className={styles.title}>Tic-Tac-Toe</h2>
       <Grid board={board} onCellClick={handleCellClick} isGameOver={!!gameResult} />
       {gameResult && (
         <div className={styles.result}>

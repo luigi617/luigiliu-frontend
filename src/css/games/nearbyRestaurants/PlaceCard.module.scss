@@ -39,6 +39,7 @@
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 8px;
+    color: var(--theme-text-color);
   }
   
   .placeType,
@@ -48,10 +49,12 @@
   .placeOpenNow {
     font-size: 0.9rem;
     margin-bottom: 4px;
+    color: var(--theme-text-color);
   }
   
   .placeOpenNow {
     color: #28a745;
     font-weight: bold;
+    
   }
   

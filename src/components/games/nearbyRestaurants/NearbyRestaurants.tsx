@@ -141,9 +141,9 @@ const NearbyRestaurants: React.FC<NearbyRestaurantsProps> = ({ apiKey, radius = 
   }, [location, apiKey, radius]);
 
   return (
-    <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-      <h1>Nearby Restaurants</h1>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
+    <div className={styles.nearbyRestaurantsContainer} >
+      <h1 className={styles.title}>Nearby Restaurants</h1>
+      {error && <p className={styles.errorMessage}>{error}</p>}
       {restaurants.length ? (
         <div className={styles.restaurantList}>
           {restaurants.map((restaurant, index) => (
