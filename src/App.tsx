@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 
 import { ThemeProvider } from './components/ThemeContext';
@@ -12,6 +12,8 @@ import GameTyping from './pages/Game-Typing';
 import ArticleHumanActivityRecognitionUsingObjectDetection from './pages/articles/HumanActivityRecognitionUsingObjectDetection';
 import ScrollToTop from './components/ScrollToTop';
 import NearbyRestaurants from './components/games/nearbyRestaurants/NearbyRestaurants';
+import TicTacToe from './components/games/tictactoe/TicTacToe';
+import { fetchCsrfToken } from './utils/CustomAxios';
 
 
 
@@ -27,6 +29,11 @@ const RemoveTrailingSlash: React.FC = () => {
 const gooleMapKey = import.meta.env.VITE_GOOGLE_MAP_NEARBY_SEARCH_KEY;
 
 const App: React.FC = () => {
+
+  useEffect(() => {
+    fetchCsrfToken();
+  }, []);
+  
   return (
     <Router>
       <RemoveTrailingSlash />
@@ -39,6 +46,7 @@ const App: React.FC = () => {
           <Route path="/games" element={<Games />} />
           <Route path="/games/2048" element={<Game2048 />} />
           <Route path="/games/typing" element={<GameTyping />} />
+          <Route path="/games/tictactoe" element={<TicTacToe />} />
           <Route path="/games/nearby-restaurants" element={<NearbyRestaurants apiKey={gooleMapKey} />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="/articles/human-activity-recognition-using-object-detection"

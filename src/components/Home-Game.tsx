@@ -32,6 +32,11 @@ const HomeGame: React.FC = () => {
             title="Nearby Restaurants"
             url='/games/nearby-restaurants'
             />
+            <GameCard
+            image={restaurantsImage}
+            title="TicTacToe"
+            url='/games/tictactoe'
+            />
         </div>
       </div>
     </div>
