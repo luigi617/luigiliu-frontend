@@ -22,7 +22,7 @@ const HomeIntroduction: React.FC = () => {
         <hr />
         {/* Subtitle */}
         <p className={styles.subtitle}>
-          TEST Student in Computer Science @ Columbia University, New York | Focusing on Software Development and Machine Learning
+          TEST? Student in Computer Science @ Columbia University, New York | Focusing on Software Development and Machine Learning
         </p>
         <hr />
         <div className={styles.aboutMeButtonContainer}>
