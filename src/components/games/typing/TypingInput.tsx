@@ -53,6 +53,7 @@ const TypingInput: React.FC<TypingInputProps> = ({
   ), []);
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent<HTMLDivElement>) => {
+      console.log(123)
       if (e.key === 'Enter') {
         resetGame(); // Trigger new game on Enter
         return;
