@@ -54,7 +54,7 @@ const TypingInput: React.FC<TypingInputProps> = ({
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent<HTMLDivElement>) => {
       if (e.key === 'Enter') {
-        setWordsNum(words.length); // Trigger new game on Enter
+        resetGame(); // Trigger new game on Enter
         return;
       }
       if (currentWordIndex >= words.length){
