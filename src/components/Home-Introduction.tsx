@@ -22,12 +22,12 @@ const HomeIntroduction: React.FC = () => {
         <hr />
         {/* Subtitle */}
         <p className={styles.subtitle}>
-          TEST? Student in Computer Science @ Columbia University, New York | Focusing on Software Development and Machine Learning
+          Student in Computer Science @ Columbia University, New York | Focusing on Software Development and Machine Learning...........
         </p>
         <hr />
         <div className={styles.aboutMeButtonContainer}>
           <CustomButton
-            text="About Me?"
+            text="About Me"
             onClick={handleClick}
             className={styles.aboutMeButton}
           />
