@@ -27,7 +27,7 @@ const HomeIntroduction: React.FC = () => {
         <hr />
         <div className={styles.aboutMeButtonContainer}>
           <CustomButton
-            text="About Me"
+            text="About Me?"
             onClick={handleClick}
             className={styles.aboutMeButton}
           />
