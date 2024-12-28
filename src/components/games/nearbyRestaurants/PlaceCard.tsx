@@ -29,7 +29,7 @@ const PlaceCard: React.FC<PlaceCardProps> = ({ images, name, url, type, rating, 
   };
 
   return (
-    <Link to={url} className={styles.placeLink}>
+    <Link to={url} className={styles.placeLink} target="_blank" rel="noopener noreferrer">
       <div className={styles.placeCard}>
         {/* Slider Component */}
         <Slider {...sliderSettings} className={styles.placeImageSlider}>

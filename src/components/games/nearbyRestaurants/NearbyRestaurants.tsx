@@ -107,13 +107,13 @@ const NearbyRestaurants: React.FC<NearbyRestaurantsProps> = ({ apiKey, radius = 
       };
 
       
-
+      
       try {
         const response = await axios.post(url, data, { headers });
         
         const results = response.data.places.sort((a: any, b: any) => b.rating - a.rating);
 
-
+        
         const restaurantData = results.map((place: any) => ({
           name: place.displayName.text,
           type: place.primaryType,
@@ -125,7 +125,7 @@ const NearbyRestaurants: React.FC<NearbyRestaurantsProps> = ({ apiKey, radius = 
             `https://places.googleapis.com/v1/${photo.name}/media?key=${apiKey}&max_width_px=500`
           ),
           openNow: place.regularOpeningHours !== undefined ? place.regularOpeningHours.openNow : "Not Known",
-          reviews: place.reviews.map((review: any) => review.originalText.text),
+          reviews: place.reviews.map((review: any) => review.originalText?.text ?? ""),
         }));
         
         setRestaurants(restaurantData);
