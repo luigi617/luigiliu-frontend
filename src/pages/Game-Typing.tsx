@@ -9,7 +9,7 @@ import wordsData from '../assets/json/english_words.json'
 
 
 const GameTyping: React.FC = () => {
-  const [wordsNum, setWordsNum] = useState(20);
+  const [wordsNum, setWordsNum] = useState(1);
   const [wpm, setWpm] = useState('--');
   const [netWpm, setNetWpm] = useState('--');
   const [accuracy, setAccuracy] = useState('--');
@@ -49,6 +49,7 @@ const GameTyping: React.FC = () => {
               words={generatedWords}
               charCount={charCount}
               wrongWordCount={wrongWordCount}
+              generateWords={generateWords}
               setWrongWordCount={setWrongWordCount}
               showStatistics={showStatistics}
               startTime={startTime}

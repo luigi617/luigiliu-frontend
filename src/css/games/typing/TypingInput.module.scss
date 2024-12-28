@@ -1,6 +1,27 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.overlay {
+  position: absolute; 
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); // semi-transparent dark background
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  color: #fff; 
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 .typingInput {
   width: 80%;
-  // min-height: 300px;
+  min-width: 400px;
   border-radius: 5px;
   border: 0.5px solid black;
   padding: 20px;
@@ -9,6 +30,7 @@
   font-family: monospace;
   display: flex;
   flex-wrap: wrap;
+  outline: none;
 }
 
 .correctChar {
@@ -21,7 +43,7 @@
 }
 
 .word {
-  display: inline-block;
+  display: inline;
   margin-bottom: 10px;
   
   color: var(--theme-text-color);
@@ -30,7 +52,7 @@
   margin-left: 2px;
 }
 .cursor {
-  display: inline-block; 
+  display: inline; 
   border-left: 2px solid var(--theme-text-color);;
   height: 1em;
   margin-left: 0px!important;
