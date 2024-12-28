@@ -89,7 +89,6 @@ const AboutWork: React.FC = () => {
     return (
         <div className={styles.aboutWorkContainer}>
             <div className={styles.workContainer}>
-            <h1 className={styles.title}>Professional Experiences</h1>
             {workExperiences.map((experience) => 
                 <TextImageRowComponent
                 key={experience.key}

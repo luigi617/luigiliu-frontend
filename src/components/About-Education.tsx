@@ -10,7 +10,6 @@ const AboutEducation: React.FC = () => {
     return (
         <div className={styles.aboutEducationContainer}>
             <div className={styles.educationContainer}>
-            <h1 className={styles.title}>Education</h1>
             
             <TextImageRowComponent
                 text={

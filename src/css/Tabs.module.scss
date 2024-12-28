@@ -1,0 +1,37 @@
+.tabsContainer {
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-bottom: 8px;
+  }
+  
+  .tabButton {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    margin: 0 8px;
+    font-size: var(--font-size-llarge);
+    color: var(--theme-text-color);
+    transition: color 0.3s;
+  
+    &:hover {
+      color: #555;
+    }
+  }
+  
+  .activeTab {
+    color: var(--theme-text-color);
+    font-weight: bold;
+  }
+  
+  .highlightBar {
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    background-color: #000;
+    transition: transform 0.3s ease, width 0.3s ease;
+  }
+  

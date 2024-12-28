@@ -1,0 +1,10 @@
+.aboutContainer{
+    background-color: var(--theme-background);
+    min-height: calc(100vh - var(--navbar-height));
+}
+
+.tabsContainer{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
