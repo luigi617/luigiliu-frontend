@@ -2,6 +2,8 @@
   position: relative;
   display: flex;
   justify-content: center;
+  width: 80%;
+  min-width: 400px;
 }
 
 .overlay {
@@ -20,8 +22,7 @@
 }
 
 .typingInput {
-  width: 80%;
-  min-width: 400px;
+  width: 100%;
   border-radius: 5px;
   border: 0.5px solid black;
   padding: 20px;

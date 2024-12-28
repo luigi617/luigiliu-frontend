@@ -9,7 +9,7 @@ import wordsData from '../assets/json/english_words.json'
 
 
 const GameTyping: React.FC = () => {
-  const [wordsNum, setWordsNum] = useState(1);
+  const [wordsNum, setWordsNum] = useState(20);
   const [wpm, setWpm] = useState('--');
   const [netWpm, setNetWpm] = useState('--');
   const [accuracy, setAccuracy] = useState('--');
