@@ -18,6 +18,7 @@ const DescriptionSkillsSection: React.FC<DescriptionSkillsSectionProps> = ({ des
       <div className={styles.descriptionColumn}>
         {description}
       </div>
+      {skills && skills.length > 0 &&
       <div className={styles.skillsColumn}>
         <ul className={styles.skillsList}>
           {skills.map((skill, index) => (
@@ -34,6 +35,7 @@ const DescriptionSkillsSection: React.FC<DescriptionSkillsSectionProps> = ({ des
           ))}
         </ul>
       </div>
+      }
     </div>
   );
 };

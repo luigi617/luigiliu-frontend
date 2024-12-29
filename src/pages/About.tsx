@@ -1,17 +1,23 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { ReactNode, useCallback, useEffect, useState } from 'react';
 import AboutEducation from '../components/About-Education';
 import AboutWork from '../components/About-Work';
 import Footer from '../components/Footer';
 import styles from '../css/About.module.scss'
 import Tabs, { TabOption } from '../components/Tabs';
 import { useLocation, useNavigate } from 'react-router-dom';
+import AboutProject from '../components/About-Project';
 
 
 const tabItems: TabOption[] = [
   { id: 'education', label: 'Education' },
-  { id: 'work', label: 'Professional Experiences' },
-  { id: 'project', label: 'Projects' },
+  { id: 'professional_experiences', label: 'Professional Experiences' },
+  { id: 'projects', label: 'Projects' },
 ];
+const tabElement: Record<string, ReactNode> = {
+  education: <AboutEducation />,
+  professional_experiences: <AboutWork />,
+  projects: <AboutProject />,
+};
 
 const About: React.FC = () => {
   const navigate = useNavigate();
@@ -44,9 +50,7 @@ const About: React.FC = () => {
           onChange={handleTabChange} 
         />
       </div>
-        {currentTab === 'education' && <AboutEducation />}
-        {currentTab === 'work' && <AboutWork />}
-        {currentTab === 'project' && <AboutWork />}
+      {tabElement[currentTab]}
       <Footer />
     </div>
   );

@@ -1,0 +1,9 @@
+.alink {
+    color: var(--theme-link-color);
+    text-decoration: none;
+  
+    &:hover {
+      text-decoration: underline;
+      color: var(--theme-link-hover-color);
+    }
+}
