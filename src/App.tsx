@@ -14,6 +14,7 @@ import ScrollToTop from './components/ScrollToTop';
 import NearbyRestaurants from './components/games/nearbyRestaurants/NearbyRestaurants';
 import TicTacToe from './components/games/tictactoe/TicTacToe';
 import { fetchCsrfToken } from './utils/CustomAxios';
+import RealGestureX from './pages/articles/RealGestureX';
 
 
 
@@ -51,6 +52,8 @@ const App: React.FC = () => {
           <Route path="/articles" element={<Articles />} />
           <Route path="/articles/human-activity-recognition-using-object-detection"
                 element={<ArticleHumanActivityRecognitionUsingObjectDetection />} />
+          <Route path="/articles/realgesturex"
+                element={<RealGestureX />} />
         </Routes>
       </ThemeProvider>
     </Router>
