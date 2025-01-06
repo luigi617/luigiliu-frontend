@@ -2,8 +2,8 @@ import React from 'react';
 import ArticleCard from './ArticleCard';
 import styles from '../css/Home-Article.module.scss';
 
-import articleHumanActivityRecognitionUsingObjectDetectionImage from '../assets/images/articleHumanActivityRecognitionUsingObjectDetection.jpeg';
-import articleRealGestureXImage from '../assets/images/realgesturex_cover.jpeg';
+import articleHumanActivityRecognitionUsingObjectDetectionImage from '../assets/images/articles/articleHumanActivityRecognitionUsingObjectDetection.jpeg';
+import articleRealGestureXImage from '../assets/images/articles/realgesturex_cover.jpeg';
 import { Link } from 'react-router-dom';
 
 const articles = [

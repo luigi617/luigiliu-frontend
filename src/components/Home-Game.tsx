@@ -2,9 +2,9 @@ import React from 'react';
 import styles from '../css/Home-Game.module.scss'
 import GameCard from './GameCard';
 
-import game2048Image from '../assets/images/2048_logo.png';
-import typingImage from '../assets/images/typing.jpg';
-import tictactoeImage from '../assets/images/Tic_tac_toe.svg';
+import game2048Image from '../assets/images/games/2048_logo.png';
+import typingImage from '../assets/images/games/typing.jpg';
+import tictactoeImage from '../assets/images/games/Tic_tac_toe.svg';
 import { Link } from 'react-router-dom';
 
 

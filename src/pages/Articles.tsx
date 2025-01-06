@@ -1,6 +1,6 @@
 import React from 'react';
-import articleHumanActivityRecognitionUsingObjectDetectionImage from '../assets/images/articleHumanActivityRecognitionUsingObjectDetection.jpeg';
-import articleRealGestureXImage from '../assets/images/realgesturex_cover.jpeg';
+import articleHumanActivityRecognitionUsingObjectDetectionImage from '../assets/images/articles/articleHumanActivityRecognitionUsingObjectDetection.jpeg';
+import articleRealGestureXImage from '../assets/images/articles/realgesturex_cover.jpeg';
 import styles from '../css/Articles.module.scss';
 import ArticleCard from '../components/ArticleCard';
 

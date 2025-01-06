@@ -1,10 +1,11 @@
 import React from 'react';
 import GameCard from '../components/GameCard';
-import game2048Image from '../assets/images/2048_logo.png';
-import typingImage from '../assets/images/typing.jpg';
+import game2048Image from '../assets/images/games/2048_logo.png';
+import typingImage from '../assets/images/games/typing.jpg';
+import restaurantsImage from '../assets/images/games/restaurants.webp';
+import tictactoeImage from '../assets/images/games/Tic_tac_toe.svg';
+import nbaImage from '../assets/images/games/nba-logo.jpg';
 import styles from '../css/Games.module.scss'
-import restaurantsImage from '../assets/images/restaurants.webp';
-import tictactoeImage from '../assets/images/Tic_tac_toe.svg';
 
 const Games: React.FC = () => {
   return (
@@ -31,7 +32,7 @@ const Games: React.FC = () => {
             url='/games/tictactoe'
             />
             <GameCard
-            image={tictactoeImage}
+            image={nbaImage}
             title="NBA"
             url='/games/nba'
             />
