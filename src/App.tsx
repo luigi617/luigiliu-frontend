@@ -13,6 +13,7 @@ import ArticleHumanActivityRecognitionUsingObjectDetection from './pages/article
 import ScrollToTop from './components/ScrollToTop';
 import NearbyRestaurants from './pages/games/NearbyRestaurants';
 import TicTacToe from './pages/games/TicTacToe';
+import NBA from './pages/games/NBA';
 import { fetchCsrfToken } from './utils/CustomAxios';
 import RealGestureX from './pages/articles/RealGestureX';
 
@@ -49,6 +50,7 @@ const App: React.FC = () => {
           <Route path="/games/typing" element={<GameTyping />} />
           <Route path="/games/tictactoe" element={<TicTacToe />} />
           <Route path="/games/nearby-restaurants" element={<NearbyRestaurants apiKey={gooleMapKey} />} />
+          <Route path="/games/nba" element={<NBA />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="/articles/human-activity-recognition-using-object-detection"
                 element={<ArticleHumanActivityRecognitionUsingObjectDetection />} />

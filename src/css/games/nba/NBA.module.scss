@@ -1,0 +1,13 @@
+.nbaContainer{
+    background-color: var(--theme-background);
+    min-height: calc(100vh - var(--navbar-height));
+    padding: 20px;
+}
+.title{
+    color: var(--theme-text-color);
+}
+.errorMessage{
+    color: red;
+}
+
+    

@@ -161,7 +161,7 @@ const NearbyRestaurants: React.FC<NearbyRestaurantsProps> = ({ apiKey, radius = 
           ))}
         </div>
       ) : (
-        <p>Loading nearby restaurants...</p>
+        <p className={styles.text}>Loading nearby restaurants...</p>
       )}
     </div>
   );

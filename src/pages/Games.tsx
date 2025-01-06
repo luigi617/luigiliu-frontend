@@ -30,6 +30,11 @@ const Games: React.FC = () => {
             title="TicTacToe"
             url='/games/tictactoe'
             />
+            <GameCard
+            image={tictactoeImage}
+            title="NBA"
+            url='/games/nba'
+            />
         </div>
     </div>
   );
