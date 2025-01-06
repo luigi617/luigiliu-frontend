@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import PlaceCard from './PlaceCard'; // Import the PlaceCard component
-import styles from '../../../css/games/nearbyRestaurants/NearbyRestaurants.module.scss'
+import PlaceCard from '../../components/games/nearbyRestaurants/PlaceCard'; // Import the PlaceCard component
+import styles from '../../css/games/nearbyRestaurants/NearbyRestaurants.module.scss'
 
 
 type Restaurant = {

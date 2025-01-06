@@ -7,12 +7,12 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Games from './pages/Games';
 import Articles from './pages/Articles';
-import Game2048 from './pages/Game-2048';
-import GameTyping from './pages/Game-Typing';
+import Game2048 from './pages/games/2048';
+import GameTyping from './pages/games/Typing';
 import ArticleHumanActivityRecognitionUsingObjectDetection from './pages/articles/HumanActivityRecognitionUsingObjectDetection';
 import ScrollToTop from './components/ScrollToTop';
-import NearbyRestaurants from './components/games/nearbyRestaurants/NearbyRestaurants';
-import TicTacToe from './components/games/tictactoe/TicTacToe';
+import NearbyRestaurants from './pages/games/NearbyRestaurants';
+import TicTacToe from './pages/games/TicTacToe';
 import { fetchCsrfToken } from './utils/CustomAxios';
 import RealGestureX from './pages/articles/RealGestureX';
 

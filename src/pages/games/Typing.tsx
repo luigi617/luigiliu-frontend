@@ -1,11 +1,11 @@
 
 
 import React, { useState, useEffect, useCallback } from 'react';
-import styles from '../css/games/typing/Typing.module.scss'
-import TypingInput from '../components/games/typing/TypingInput';
-import WordPicker from '../components/games/typing/WordPicker';
-import Statistics from '../components/games/typing/Statistics';
-import wordsData from '../assets/json/english_words.json'
+import styles from '../../css/games/typing/Typing.module.scss'
+import TypingInput from '../../components/games/typing/TypingInput';
+import WordPicker from '../../components/games/typing/WordPicker';
+import Statistics from '../../components/games/typing/Statistics';
+import wordsData from '../../assets/json/english_words.json'
 
 
 const GameTyping: React.FC = () => {

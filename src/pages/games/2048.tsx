@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import styles from '../css/games/2048/Game2048.module.scss';
-import Grid from '../components/games/2048/Grid';
+import styles from '../../css/games/2048/Game2048.module.scss';
+import Grid from '../../components/games/2048/Grid';
 import { v4 as uuidv4 } from 'uuid';
 
 interface TileType {

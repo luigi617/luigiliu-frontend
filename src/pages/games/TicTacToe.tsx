@@ -1,9 +1,9 @@
 
 
 import React, { useState, useEffect } from 'react';
-import Grid from './Grid';
-import styles from '../../../css/games/tictactoe/TicTacToe.module.scss'
-import customAxios from '../../../utils/CustomAxios';
+import Grid from '../../components/games/tictactoe/Grid';
+import styles from '../../css/games/tictactoe/TicTacToe.module.scss'
+import customAxios from '../../utils/CustomAxios';
 
 type BoardState = number[]; // Array of integers representing the board (0 = empty, 1 = agent, -1 = opponent)
 type GameResult = 'win' | 'lose' | 'draw' | 'continue';
