@@ -78,3 +78,9 @@ body {
     background-color: var(--primary-color);
     color: var(--secondary-color);
 }
+
+button:disabled {
+    background-color: var(--button-disabled-background);
+    color: var(--button-disabled-text-color);
+    cursor: not-allowed;
+  }

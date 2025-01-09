@@ -22,12 +22,14 @@
   .cell {
     width: 100px;
     height: 100px;
-    font-size: 24px;
+    font-size: var(--font-size-llarge);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     color: var(--theme-text-color);
+    appearance: none;
+    -webkit-appearance: none;
   }
   
   .result {
