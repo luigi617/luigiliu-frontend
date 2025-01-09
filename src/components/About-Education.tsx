@@ -4,7 +4,7 @@ import styles from '../css/About-Education.module.scss'
 import baseStyles from '../css/base.module.scss'
 import dagomariImage from '../assets/images/about/dagomari.jpeg';
 import bocconiImage from '../assets/images/about/bocconi.jpg';
-import nusImage from '../assets/images/about/nus.png';
+import nusImage from '../assets/images/about/nus.jpg';
 import columbiaImage from '../assets/images/about/columbia.jpg';
 import thesis from '../assets/pdf/thesis.pdf'
 

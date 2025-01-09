@@ -1,7 +1,7 @@
 import React from 'react';
 import CustomButton from './CustomButton';
 import styles from '../css/Home-Introduction.module.scss';
-import profileLightImage from '../assets/images/home.png';
+import profileLightImage from '../assets/images/home.svg';
 import profileDarkImage from '../assets/images/home-dark.png';
 import { useNavigate } from 'react-router-dom';
 import { useTheme } from './ThemeContext';

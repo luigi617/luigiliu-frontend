@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from '../../css/articles/GeneralArticle.module.scss';
-import image9 from '../../assets/images/articles/9.png';
-import image10 from '../../assets/images/articles/10.png';
-import image11 from '../../assets/images/articles/11.png';
-import image12 from '../../assets/images/articles/12.png';
+import image9 from '../../assets/images/articles/9.jpg';
+import image10 from '../../assets/images/articles/10.jpg';
+import image11 from '../../assets/images/articles/11.jpg';
+import image12 from '../../assets/images/articles/12.jpg';
 import realGestureXReport from '../../assets/pdf/RealGestureX-Report.pdf'
 
 // Define the component with React.FC (React Functional Component)

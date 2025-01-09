@@ -1,12 +1,12 @@
 import React from 'react';
 import styles from '../../css/articles/GeneralArticle.module.scss';
-import image1 from '../../assets/images/articles/1.png';
+import image1 from '../../assets/images/articles/1.jpg';
 import image2 from '../../assets/images/articles/2.jpg';
 import image3 from '../../assets/images/articles/3.jpg';
 import image4 from '../../assets/images/articles/4.jpg';
 import image5 from '../../assets/images/articles/5.jpg';
-import image6 from '../../assets/images/articles/6.png';
-import image7 from '../../assets/images/articles/7.png';
+import image6 from '../../assets/images/articles/6.jpg';
+import image7 from '../../assets/images/articles/7.jpg';
 import image8 from '../../assets/images/articles/8.jpg';
 
 // Define the component with React.FC (React Functional Component)

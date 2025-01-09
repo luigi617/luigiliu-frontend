@@ -2,9 +2,9 @@ import React from 'react';
 import baseStyles from '../css/base.module.scss'
 import styles from '../css/About-Project.module.scss'
 import TextImageRowComponent from './TextImageRowComponent';
-import ecobambuImage from '../assets/images/about/ecobambu.png';
-import liveStreamingImage from '../assets/images/about/livestreaming.png';
-import realgesturexImage from '../assets/images/about/realgesturex.png';
+import ecobambuImage from '../assets/images/about/ecobambu.jpg';
+import liveStreamingImage from '../assets/images/about/livestreaming.jpg';
+import realgesturexImage from '../assets/images/about/realgesturex.jpg';
 import DescriptionSkillsSection from './About-Work-DescriptionSkillsSection';
 import realGestureXReport from '../assets/pdf/RealGestureX-Report.pdf'
 const projects = [

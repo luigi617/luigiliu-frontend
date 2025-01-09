@@ -4,9 +4,9 @@ import TextImageRowComponent from './TextImageRowComponent';
 import euroingroImage from '../assets/images/about/euroingro.jpeg';
 import unicreditImage from '../assets/images/about/unicredit.jpeg';
 import amazonImage from '../assets/images/about/amazon.jpg';
-import ecobambuImage from '../assets/images/about/ecobambu.png';
-import decenergyImage from '../assets/images/about/decenergy.png';
-import articulateaiImage from '../assets/images/about/articulateai.png';
+import ecobambuImage from '../assets/images/about/ecobambu.jpg';
+import decenergyImage from '../assets/images/about/decenergy.jpg';
+import articulateaiImage from '../assets/images/about/articulateai.jpg';
 import mathworksImage from '../assets/images/about/mathworks.jpg';
 import DescriptionSkillsSection from './About-Work-DescriptionSkillsSection';
 
