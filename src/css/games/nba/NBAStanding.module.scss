@@ -1,0 +1,99 @@
+.standingsContainer {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: var(--theme-background);
+    border-radius: 6px;
+    color: var(--theme-text-color);
+  }
+  
+  .conferenceButtons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .conferenceButton {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: var(--font-size-base);
+    cursor: pointer;
+    color: var(--theme-text-color);
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-bottom 0.2s;
+  
+    &:hover {
+        color: var(--theme-text-color);
+    }
+  }
+  
+  .active {
+    color: var(--theme-text-color);
+    border-bottom: 2px solid var(--theme-text-color);;
+  }
+  
+  
+  /* Table */
+  .standingsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    background-color: var(--theme-background);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .standingsTable thead th {
+    background-color: var(--theme-background);
+    text-align: left;
+    padding: 0.75rem;
+    font-weight: 400;
+    font-size: var(--font-size-small);
+    color: var(--theme-text-color);
+    border-bottom: 1px solid #444;
+  }
+  
+  .standingsTable tbody tr {
+    border-bottom: 1px solid #444;
+  }
+  
+  .standingsTable tbody tr:last-child {
+    border-bottom: none;
+  }
+  
+  .standingsTable th,
+  .standingsTable td {
+    padding: 0.75rem;
+    font-size: var(--font-size-small);
+    color: var(--theme-text-color);
+  }
+  
+  .tableHeaderRank {
+    width: 3rem;
+  }
+  
+  .tableHeaderTeam {
+    width: 10rem;
+  }
+  
+  .tableDataRank {
+    text-align: center;
+    color: var(--theme-text-color);
+  }
+  
+  .tableDataTeam {
+    font-weight: 500;
+    color: var(--theme-text-color);
+    display: flex;
+    align-items: center;
+  }
+  .logo{
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+    border-radius: 50%;
+  }

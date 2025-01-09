@@ -1,13 +1,75 @@
-.nbaContainer{
+.nbaContainer {
     background-color: var(--theme-background);
-    min-height: calc(100vh - var(--navbar-height));
+    min-height: calc(100vh - var(--navbar-height) - 40px);
     padding: 20px;
-}
-.title{
-    color: var(--theme-text-color);
-}
-.errorMessage{
-    color: red;
-}
+  }
+  
+  /* Make the columns side by side */
+  .columns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+ 
+  
 
+  .standingsColumn {
+    flex: 1;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     
+    /* Set the height or max-height, then enable scroll */
+    max-height: calc(100vh - var(--navbar-height) - 40px);
+    overflow-y: auto; 
+
+    scrollbar-width: none;          /* Firefox */
+    -ms-overflow-style: none;       /* IE and Edge */
+
+
+  }
+
+  .gamesColumn{
+    flex: 1;
+    margin: 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    /* Set the height or max-height, then enable scroll */
+    max-height: calc(100vh - var(--navbar-height) - 40px);
+    overflow-y: auto; 
+
+    scrollbar-width: none;          /* Firefox */
+    -ms-overflow-style: none;       /* IE and Edge */
+
+    .loadGames {
+        cursor: pointer;
+        color: var(--theme-text-color);
+        font-size: var(--font-size-small);
+        text-align: center;
+        text-decoration: underline;
+        margin: 10px 0;
+        transition: color 0.2s ease-in-out;
+    
+        &:hover {
+          color: var(--hover-color);
+        }
+      }
+  }
+
+  /* Hide scrollbar for Chrome, Safari, and Opera */
+.gamesColumn::-webkit-scrollbar,
+.standingsColumn::-webkit-scrollbar {
+  display: none;
+}
+  
+  .title {
+    color: var(--theme-text-color);
+  }
+  
+  .errorMessage {
+    color: red;
+  }
+  

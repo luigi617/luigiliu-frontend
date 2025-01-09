@@ -1,0 +1,87 @@
+.nbaCard {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: var(--theme-background);
+    color: var(--theme-text-color);
+    padding: 16px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+  
+.header {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-size-small);
+    color: var(--theme-text-less-important-color);
+    margin-bottom: 16px;
+}
+  
+  .league {
+    font-weight: bold;
+  }
+  
+  .status {
+    text-transform: uppercase;
+  }
+  
+  .scoreSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .team {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    border-radius: 50%;
+  }
+  
+  .teamName {
+    font-size: var(--font-size-base);
+    font-weight: bold;
+  }
+  
+  .record {
+    font-size: var(--font-size-ssmall);
+    color: var(--theme-text-less-important-color);
+    text-align: center;
+  }
+  
+  .scores {
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-llarge);
+  }
+  
+  .score {
+    margin: 0 8px;
+  }
+  
+  .quarters {
+    margin-top: 16px;
+    border-top: 1px solid #333;
+    padding-top: 8px;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .cell {
+    flex: 1;
+    text-align: center;
+    font-size: var(--font-size-ssmall);
+    padding: 4px;
+  }
+  
