@@ -159,8 +159,7 @@ const NBA: React.FC = () => {
     // Handle errors
     eventSource.onerror = (err) => {
       console.error('SSE error:', err);
-      setError('Connection lost. Retrying...');
-      eventSource.close();
+      // setError('Connection lost. Retrying...');
     };
 
     return () => {
