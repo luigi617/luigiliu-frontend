@@ -1,6 +1,8 @@
 
 import React from 'react';
 import styles from '../../../css/games/nba/NBAGameCard.module.scss';
+import { getMonthName } from '../../../utils/date';
+import moment from 'moment-timezone';
 
 interface TeamInfo {
     logo: string;
@@ -21,6 +23,8 @@ interface NBAGameCardProps {
     away_team_info: TeamInfo;
 }
 
+const ET_TIMEZONE = 'America/New_York';
+
 const NBACard: React.FC<NBAGameCardProps> = (game) => {
 
     const getQuarterName = (q: number) => {
@@ -29,12 +33,42 @@ const NBACard: React.FC<NBAGameCardProps> = (game) => {
         }
         return "OT" + (q - 4)
     }
+    
+    const formatDate = (date_string: string) => {
+        const parsedDate = new Date(date_string);
+        const day = String(parsedDate.getDate()).padStart(2, '0');
+        const month = getMonthName(parsedDate.getMonth()+1)
+        const year = parsedDate.getFullYear();
+    
+        return `${month} ${day} ${year}`;
+    };
+    
+    const gameStatus = (status: string, date_string: string) => {
+        const parsedETDate = moment.utc(date_string).tz("America/New_York");
+
+        if (game.game_status == "Scheduled"){
+            // const hour24 = String(parsedETDate.hour()).padStart(2, '0');
+            const hour24 = parsedETDate.hour()
+            const minuteStr = String(parsedETDate.minute()).padStart(2, '0');
+            
+            var hour = hour24;
+            var clock12 = "AM";
+            if (hour24 >= 12){
+                hour = hour24 - 12;
+                clock12 = "PM";
+            }
+            const hourStr = String(hour);
+            return `${hourStr}:${minuteStr} ${clock12} ET`
+        }
+        return status;
+    }
+      
     return (
         <div className={styles.nbaCard}>
         {/* Header */}
         <div className={styles.header}>
-            <span className={styles.league}>{game.game_date}</span>
-            <span className={styles.status}>{game.game_status}</span>
+            <span className={styles.league}>{formatDate(game.game_date)}</span>
+            <span className={styles.status}>{gameStatus(game.game_status, game.game_date)}</span>
         </div>
 
         {/* Scores Section */}

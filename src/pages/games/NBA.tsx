@@ -67,20 +67,13 @@ const NBA: React.FC = () => {
       
       var gameData = result["data"]
       
-      if (gameData.length == 0 && dir == "next"){
-        setNextGamesUrl(null);
-      } else if (gameData.length > 0 && dir == "next"){
-        setNextGamesUrl(result["next_link"] || nextGamesUrl);
-      } else if (gameData.length == 0 && dir == "prev"){
-        setPrevGamesUrl(null);
-      } else if (gameData.length > 0 && dir == "prev"){
-        setPrevGamesUrl(result["prev_link"] || prevGamesUrl);
-      } else if (gameData.length == 0 && dir == "today"){
-        setNextGamesUrl(null);
-        setPrevGamesUrl(null);
-      } else if (gameData.length > 0 && dir == "today"){
-        setNextGamesUrl(result["next_link"] || nextGamesUrl);
-        setPrevGamesUrl(result["prev_link"] || prevGamesUrl);
+      if (dir == "next"){
+        setNextGamesUrl(result["next_link"]);
+      } else if (dir == "prev"){
+        setPrevGamesUrl(result["prev_link"]);
+      } else {
+        setNextGamesUrl(result["next_link"]);
+        setPrevGamesUrl(result["prev_link"]);
       }
       
       for (let i = 0; i < gameData.length; i++){
@@ -97,6 +90,7 @@ const NBA: React.FC = () => {
       } else {
         newGames = [...gameData, ...games];
       }
+      console.log(newGames);
       
       setGames(newGames)
     } catch (error) {
@@ -109,14 +103,14 @@ const NBA: React.FC = () => {
       const gamesJSON = JSON.parse(GamesStr);
   
       const newGames = [...prevGames];
+      
       for (let i = 0; i < newGames.length; i++) {
         if (newGames[i].game_id in gamesJSON){
-          newGames[i] = gamesJSON[newGames[i].game_id];
-          var awayTeamLogo =  domainURL + newGames[i]["away_team_info"]["logo"]
-          var homeTeamLogo = domainURL + newGames[i]["home_team_info"]["logo"]
-          
-          newGames[i]["away_team_info"]["logo"] = awayTeamLogo
-          newGames[i]["home_team_info"]["logo"] = homeTeamLogo
+          newGames[i]["away_team_info"]["point"] = gamesJSON[newGames[i].game_id]["away_team_info"]["point"];
+          newGames[i]["away_team_info"]["qtr_points"] = gamesJSON[newGames[i].game_id]["away_team_info"]["qtr_points"];
+          newGames[i]["home_team_info"]["point"] = gamesJSON[newGames[i].game_id]["home_team_info"]["point"];
+          newGames[i]["home_team_info"]["qtr_points"] = gamesJSON[newGames[i].game_id]["home_team_info"]["qtr_points"];
+          newGames[i]["game_status"] = gamesJSON[newGames[i].game_id]["game_status"];
         }
       }
   
