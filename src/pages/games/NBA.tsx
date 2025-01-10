@@ -64,6 +64,7 @@ const NBA: React.FC = () => {
         setError("Error while fetching games")
       }
       var result = response.data
+      
       var gameData = result["data"]
       
       if (gameData.length == 0 && dir == "next"){
@@ -81,8 +82,9 @@ const NBA: React.FC = () => {
         setNextGamesUrl(result["next_link"] || nextGamesUrl);
         setPrevGamesUrl(result["prev_link"] || prevGamesUrl);
       }
-
+      
       for (let i = 0; i < gameData.length; i++){
+        
         var awayTeamLogo =  domainURL + gameData[i]["away_team_info"]["logo"]
         var homeTeamLogo = domainURL + gameData[i]["home_team_info"]["logo"]
         

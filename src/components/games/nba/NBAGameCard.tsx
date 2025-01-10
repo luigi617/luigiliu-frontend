@@ -74,7 +74,7 @@ const NBACard: React.FC<NBAGameCardProps> = (game) => {
         </div>
 
         {/* Quarter Breakdown */}
-        {!game.is_future_game &&
+        {!game.is_future_game && game.home_team_info.qtr_points.length > 0 &&
         <div className={styles.quarters}>
             <div className={styles.row}>
             <div className={styles.cell}>Team</div>
