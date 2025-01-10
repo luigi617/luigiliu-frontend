@@ -85,3 +85,25 @@
     padding: 4px;
   }
   
+
+  @media (max-width: 576px) {
+    .scores {
+      font-size: var(--font-size-base);
+    }
+    .teamName {
+      font-size: var(--font-size-small);
+    }
+    .logo {
+      width: 30px;
+      height: 30px;
+      margin-right: 8px;
+      border-radius: 50%;
+    }
+    .record {
+      font-size: var(--font-size-sssmall);
+    }
+    .team {
+      display: block;
+      text-align: center;
+    }
+  }

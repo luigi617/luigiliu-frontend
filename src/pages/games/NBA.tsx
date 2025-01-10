@@ -54,6 +54,11 @@ const NBA: React.FC = () => {
 
   const [standing, setStanding] = useState<StandingData | null>(null)
 
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+  const [selectedComponent, setSelectedComponent] = useState<'games' | 'standing'>('games');
+  const isDesktop = windowWidth > 992;
+
+
   const getGames = useCallback(async (url: string | null, dir: string) => {
     if (url === null){
       return;
@@ -162,13 +167,40 @@ const NBA: React.FC = () => {
     
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
 
 
 
   return (
     <div className={styles.nbaContainer} >
       {error && <p className={styles.errorMessage}>{error}</p>}
+      {!isDesktop && 
+        <div className={styles.conferenceButtons}>
+        <button
+          className={`${styles.conferenceButton} ${
+            selectedComponent === 'games' ? styles.active : ''
+          }`}
+          onClick={() => setSelectedComponent('games')}
+        >
+          Games
+        </button>
+        <button
+          className={`${styles.conferenceButton} ${
+            selectedComponent === 'standing' ? styles.active : ''
+          }`}
+          onClick={() => setSelectedComponent('standing')}
+        >
+          Standing
+        </button>
+      </div>
+      }
       <div className={styles.columns}>
+        {(isDesktop || selectedComponent == "games") &&
         <div className={styles.gamesColumn}>
           {prevGamesUrl && (
             <div
@@ -198,11 +230,14 @@ const NBA: React.FC = () => {
             </div>
           )}
         </div>
+        }
+        {(isDesktop || selectedComponent == "standing") &&
         <div className={styles.standingsColumn}>
           {standing &&
           <NBAStanding standings={standing} />
-        }
+          }
         </div>
+        }
       </div>
 
     </div>

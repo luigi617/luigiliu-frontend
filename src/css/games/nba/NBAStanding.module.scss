@@ -2,7 +2,7 @@
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-    padding: 1rem;
+    // padding: 1rem;
     background-color: var(--theme-background);
     border-radius: 6px;
     color: var(--theme-text-color);
@@ -72,21 +72,15 @@
     color: var(--theme-text-color);
   }
   
-  .tableHeaderRank {
-    width: 3rem;
+  .rank {
+    width: 20px;
   }
   
-  .tableHeaderTeam {
-    width: 10rem;
-  }
+
   
-  .tableDataRank {
-    text-align: center;
-    color: var(--theme-text-color);
-  }
+  
   
   .tableDataTeam {
-    font-weight: 500;
     color: var(--theme-text-color);
     display: flex;
     align-items: center;

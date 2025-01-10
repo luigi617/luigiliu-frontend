@@ -73,3 +73,39 @@
     color: red;
   }
   
+
+  .conferenceButtons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+  }
+  
+  .conferenceButton {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: var(--font-size-base);
+    cursor: pointer;
+    color: var(--theme-text-color);
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-bottom 0.2s;
+  
+    &:hover {
+        color: var(--theme-text-color);
+    }
+  }
+  
+  .active {
+    color: var(--theme-text-color);
+    border-bottom: 2px solid var(--theme-text-color);;
+  }
+
+
+  @media (max-width: 550px) {
+    .nbaContainer {
+      padding: 5px;
+    }
+    
+  }

@@ -75,13 +75,13 @@ const NBACard: React.FC<NBAGameCardProps> = (game) => {
         <div className={styles.scoreSection}>
             {/* Home Team */}
             <div className={styles.team}>
-            <img src={game.home_team_info.logo} alt={game.home_team_info.team_name} className={styles.logo} />
-            <div>
-                <div className={styles.teamName}>{game.home_team_info.team_name}</div>
-                {!game.is_future_game &&
-                <div className={styles.record}>({game.home_team_info.team_wins_losses})</div>
-                }
-            </div>
+                <img src={game.home_team_info.logo} alt={game.home_team_info.team_name} className={styles.logo} />
+                <div>
+                    <div className={styles.teamName}>{game.home_team_info.team_name}</div>
+                    {!game.is_future_game &&
+                    <div className={styles.record}>({game.home_team_info.team_wins_losses})</div>
+                    }
+                </div>
             </div>
 
             {/* Score */}
@@ -97,13 +97,13 @@ const NBACard: React.FC<NBAGameCardProps> = (game) => {
 
             {/* Away Team */}
             <div className={styles.team}>
-            <img src={game.away_team_info.logo} alt={game.away_team_info.team_name} className={styles.logo} />
-            <div>
-                <div className={styles.teamName}>{game.away_team_info.team_name}</div>
-                {!game.is_future_game &&
-                <div className={styles.record}>({game.away_team_info.team_wins_losses})</div>
-                }
-            </div>
+                <img src={game.away_team_info.logo} alt={game.away_team_info.team_name} className={styles.logo} />
+                <div>
+                    <div className={styles.teamName}>{game.away_team_info.team_name}</div>
+                    {!game.is_future_game &&
+                    <div className={styles.record}>({game.away_team_info.team_wins_losses})</div>
+                    }
+                </div>
             </div>
         </div>
 

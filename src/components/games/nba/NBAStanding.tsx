@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../../../css/games/nba/NBAStanding.module.scss';
+import { isDesktop } from 'react-device-detect';
 
 interface StandingTeamInfo {
   rank: number;
@@ -24,18 +25,29 @@ interface NBAStandingsProps {
 
 const NBAStandings: React.FC<NBAStandingsProps> = ({ standings }) => {
   const [selectedConference, setSelectedConference] = useState<'east' | 'west'>('east');
+  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
+  const isMobile = windowWidth < 576;
+
+  useEffect(() => {
+      const handleResize = () => setWindowWidth(window.innerWidth);
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
   // Table Header
   const renderTableHeader = () => (
     <thead>
       <tr>
-        <th className={styles.tableHeaderRank}>Rank</th>
-        <th className={styles.tableHeaderTeam}>Team</th>
+        <th>Team Name</th>
         <th>W</th>
         <th>L</th>
-        <th>Pct</th>
-        <th>Home</th>
-        <th>Away</th>
+        {!isMobile &&
+          <>
+          <th>Pct</th>
+          <th>Home</th>
+          <th>Away</th>
+          </>
+        }
         <th>Last 10</th>
       </tr>
     </thead>
@@ -46,16 +58,20 @@ const NBAStandings: React.FC<NBAStandingsProps> = ({ standings }) => {
     <tbody>
       {teams.map((team) => (
         <tr key={`${team.team_name}-${team.rank}`}>
-          <td className={styles.tableDataRank}>{team.rank}</td>
           <td className={styles.tableDataTeam}>
+            <span className={styles.rank}>{team.rank}</span>
             <img src={team.team_logo} alt={team.team_name} className={styles.logo} />
             {team.team_name}
           </td>
           <td>{team.wins}</td>
           <td>{team.losses}</td>
-          <td>{team.pct}</td>
-          <td>{team.home}</td>
-          <td>{team.away}</td>
+          {!isMobile &&
+            <>
+            <td>{team.pct}</td>
+            <td>{team.home}</td>
+            <td>{team.away}</td>
+            </>
+          }
           <td>{team.ll10}</td>
         </tr>
       ))}
