@@ -95,7 +95,6 @@ const NBA: React.FC = () => {
       } else {
         newGames = [...gameData, ...games];
       }
-      console.log(newGames);
       
       setGames(newGames)
     } catch (error) {
@@ -103,19 +102,19 @@ const NBA: React.FC = () => {
     }
   }, [games])
 
-  const updateLiveGames = useCallback((GamesStr: string) => {
+  const updateLiveGames = useCallback((liveGames: Record<string, GameData>) => {
     setGames((prevGames) => {
-      const gamesJSON = JSON.parse(GamesStr);
   
       const newGames = [...prevGames];
       
       for (let i = 0; i < newGames.length; i++) {
-        if (newGames[i].game_id in gamesJSON){
-          newGames[i]["away_team_info"]["point"] = gamesJSON[newGames[i].game_id]["away_team_info"]["point"];
-          newGames[i]["away_team_info"]["qtr_points"] = gamesJSON[newGames[i].game_id]["away_team_info"]["qtr_points"];
-          newGames[i]["home_team_info"]["point"] = gamesJSON[newGames[i].game_id]["home_team_info"]["point"];
-          newGames[i]["home_team_info"]["qtr_points"] = gamesJSON[newGames[i].game_id]["home_team_info"]["qtr_points"];
-          newGames[i]["game_status"] = gamesJSON[newGames[i].game_id]["game_status"];
+        if (newGames[i].game_id in liveGames){
+          newGames[i]["away_team_info"]["point"] = liveGames[newGames[i].game_id]["away_team_info"]["point"];
+          newGames[i]["away_team_info"]["qtr_points"] = liveGames[newGames[i].game_id]["away_team_info"]["qtr_points"];
+          newGames[i]["home_team_info"]["point"] = liveGames[newGames[i].game_id]["home_team_info"]["point"];
+          newGames[i]["home_team_info"]["qtr_points"] = liveGames[newGames[i].game_id]["home_team_info"]["qtr_points"];
+          newGames[i]["game_status"] = liveGames[newGames[i].game_id]["game_status"];
+          newGames[i]["is_future_game"] = liveGames[newGames[i].game_id]["is_future_game"];
         }
       }
   
@@ -143,27 +142,27 @@ const NBA: React.FC = () => {
     }
   }, [])
 
+  const getLiveGames = useCallback(async () => {
+    
+    try {
+      const response = await customAxios.get("/nba/live-games/");
+      if (response.status != 200){
+        setError("Error while fetching live games")
+      }
+      
+      var liveGamesData = response.data
+      updateLiveGames(liveGamesData);
+    } catch (error) {
+      setError("Error while fetching live games: " + error)
+    }
+  }, [])
+
   useEffect(() => {
     getGames(nextGamesUrl, "today")
     getStanding()
+    const interval = setInterval(getLiveGames, 10000); // Poll every 10 seconds
 
-    const eventSource = new EventSource(apiUrl + "/nba/live-games/");
-
-    // Handle incoming messages
-    eventSource.onmessage = (event) => {
-      updateLiveGames(event.data);
-      
-    };
-
-    // Handle errors
-    eventSource.onerror = (err) => {
-      console.error('SSE error:', err);
-      // setError('Connection lost. Retrying...');
-    };
-
-    return () => {
-      eventSource.close();
-    };
+    return () => clearInterval(interval); 
     
   }, []);
 
