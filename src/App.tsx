@@ -17,6 +17,7 @@ import NBA from './pages/games/NBA';
 import { fetchCsrfToken } from './utils/CustomAxios';
 import RealGestureX from './pages/articles/RealGestureX';
 import ProductDefectWorkflow from './pages/test/StructuredWorkflowPlaybook';
+import OneProductDefectWorkflow from './pages/test/StructuredOneWorkflowPlaybook';
 
 
 
@@ -59,6 +60,8 @@ const App: React.FC = () => {
                 element={<RealGestureX />} />
           <Route path="/test/structure-workflow-playbook"
                 element={<ProductDefectWorkflow />} />
+          <Route path="/test/one-structure-workflow-playbook"
+                element={<OneProductDefectWorkflow />} />
         </Routes>
       </ThemeProvider>
     </Router>

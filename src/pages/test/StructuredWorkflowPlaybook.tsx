@@ -22,23 +22,23 @@ const ProductDefectWorkflow: React.FC = () => {
           <ol>
             <li>
               <strong>Pull up Account</strong> <em>(interaction)</em>
-              <p>All chats in this flow start by asking the customer for their full name or Account ID using [Pull up Account]. This will pull up their account in the background with the right information related to this user.</p>
+              <p>Ask the customer for their full name or Account ID using and pull up corresponding account which contains with the right information related to this user.</p>
             </li>
             <li>
               <strong>Validate Purchase</strong> <em>(kb query)</em>
               <p>
-                To confirm that their purchase is valid with [Validate Purchase]:
+                Confirm that their purchase is valid with the data in database by checking these information:
               </p>
               <ul>
-                <li>Username - occasionally, the customer may not remember their username. In this case, use the Recover Username subflow in the Account Access flow.</li>
+                <li>Username</li>
                 <li>Email Address</li>
-                <li>Order ID - last item, to be consistent with verify identity</li>
+                <li>Order ID which the user want to initiate refund</li>
               </ul>
             </li>
             <li>
               <strong>Record Reason</strong> <em>(interaction)</em>
               <p>
-                Refund method in [Record Reason] - valid options are:
+                Ask for the refund method - valid options are:
               </p>
               <ul>
                 <li>
@@ -55,7 +55,7 @@ const ProductDefectWorkflow: React.FC = () => {
             </li>
             <li>
               <strong>Enter Details</strong> <em>(interaction)</em>
-              <p>Add in additional information using [Enter Details]</p>
+              <p>Add in additional information depending on previous step</p>
               <ul>
                 <li>If the customer chose gift card or paper check then enter the full address.</li>
                 <li>If the customer chose add value or credit card then enter the account ID.</li>
@@ -64,12 +64,8 @@ const ProductDefectWorkflow: React.FC = () => {
             <li>
               <strong>Offer Refund</strong> <em>(interaction)</em>
               <p>
-                Dollar amount - enter this value into the details form (without the dollar sign)
+                Offer refund to the user.
               </p>
-              <ul>
-                <li>Then click [Offer Refund]</li>
-                <li>If the customer does not know, the default amount is $50</li>
-              </ul>
             </li>
           </ol>
         </div>
