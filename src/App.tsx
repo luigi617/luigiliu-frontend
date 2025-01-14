@@ -16,6 +16,7 @@ import TicTacToe from './pages/games/TicTacToe';
 import NBA from './pages/games/NBA';
 import { fetchCsrfToken } from './utils/CustomAxios';
 import RealGestureX from './pages/articles/RealGestureX';
+import ProductDefectWorkflow from './pages/test/StructuredWorkflowPlaybook';
 
 
 
@@ -56,6 +57,8 @@ const App: React.FC = () => {
                 element={<ArticleHumanActivityRecognitionUsingObjectDetection />} />
           <Route path="/articles/realgesturex"
                 element={<RealGestureX />} />
+          <Route path="/test/structure-workflow-playbook"
+                element={<ProductDefectWorkflow />} />
         </Routes>
       </ThemeProvider>
     </Router>
