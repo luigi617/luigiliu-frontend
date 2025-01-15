@@ -18,6 +18,7 @@ import { fetchCsrfToken } from './utils/CustomAxios';
 import RealGestureX from './pages/articles/RealGestureX';
 import ProductDefectWorkflow from './pages/test/StructuredWorkflowPlaybook';
 import OneProductDefectWorkflow from './pages/test/StructuredOneWorkflowPlaybook';
+import AccountAccessWorkflow from './pages/test/StructuredSampleWorkflowPlaybook';
 
 
 
@@ -62,6 +63,8 @@ const App: React.FC = () => {
                 element={<ProductDefectWorkflow />} />
           <Route path="/test/one-structure-workflow-playbook"
                 element={<OneProductDefectWorkflow />} />
+          <Route path="/test/sample-structure-workflow-playbook"
+                element={<AccountAccessWorkflow />} />
         </Routes>
       </ThemeProvider>
     </Router>
